@@ -1,0 +1,34 @@
+<?php
+    $auth = true;
+    require '_head.php';
+    require '_alerts.php';
+?>
+
+<main class="main-content ps">
+    <div class="card-header text-center pt-4">
+        <h5>Ajouter un produit</h5>
+    </div>
+    <div class="card-body m-5">
+        <form action="add-products_post.php" method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Nom du produit" aria-label="Name" aria-describedby="Name" name="name" required>
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Description" aria-label="Description" aria-describedby="Description" name="description" required>
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Prix" aria-label="Price" aria-describedby="Price" name="price" required>
+            </div>
+            <div class="mb-3">
+                <input type="date" class="form-control" placeholder="Date limte" aria-label="dlc" aria-describedby="dlc" name="dlc">
+            </div>
+            <div class="mb-3">
+                <input type="file" class="form-control" name="image" accept="image/png, image/jpeg, image/jpg, image/gif">
+            </div>
+            <button type="submit" class="btn mt-3">Ajouter</button>
+        </form>
+    </div>
+</main>
+<?php
+include_once '_footer.php';
+?>
